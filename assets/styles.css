@@ -1,0 +1,70 @@
+/* Simple, print-friendly campaign flyer site */
+:root{
+  --bg:#0b1220;
+  --card:#0f1a30;
+  --text:#eaf0ff;
+  --muted:#c6d2ff;
+  --accent:#4dd3ff;
+  --accent2:#8cffb0;
+  --border:rgba(255,255,255,.12);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --max: 980px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  background: radial-gradient(1200px 800px at 15% 0%, #14264f 0%, var(--bg) 55%);
+  color: var(--text);
+  line-height: 1.5;
+}
+.container{max-width:var(--max); margin:0 auto; padding: 0 18px;}
+
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;}
+.skip-link:focus{left:18px;top:18px;width:auto;height:auto;background:#fff;color:#000;padding:8px 10px;border-radius:8px;z-index:10;}
+
+.hero{padding: 56px 0 24px; border-bottom: 1px solid var(--border);}
+.kicker{margin:0 0 10px; color: var(--muted); letter-spacing:.08em; text-transform:uppercase; font-weight:700; font-size:.9rem;}
+.hero h1{margin:0 0 10px; font-size: clamp(2rem, 4vw, 3rem); line-height:1.1;}
+.subhead{margin:0 0 18px; color: var(--muted); font-size:1.1rem;}
+.note{margin:14px 0 0; color: var(--muted); font-size:.95rem;}
+
+.cta-row{display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0 0;}
+.btn{display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid var(--border); color:var(--text); text-decoration:none; background: rgba(255,255,255,.06);}
+.btn:hover{border-color: rgba(255,255,255,.25)}
+.btn.primary{background: linear-gradient(90deg, rgba(77,211,255,.35), rgba(140,255,176,.20)); border-color: rgba(77,211,255,.45)}
+
+.card{background: rgba(255,255,255,.04); border:1px solid var(--border); border-radius:18px; padding:18px 18px; margin:18px 0; box-shadow: var(--shadow);}
+.card h2{margin:0 0 10px; font-size:1.25rem;}
+.card h3{margin:0 0 8px; font-size:1.05rem; color: var(--muted);}
+.emphasis{font-weight:800; color: var(--text)}
+
+.bullets, .checks{margin: 10px 0 0; padding-left: 18px;}
+.bullets li{margin: 6px 0;}
+.checks{list-style:none; padding-left: 0;}
+.checks li{margin:8px 0; padding-left: 28px; position:relative;}
+.checks li:before{content:'✓'; position:absolute; left:0; top:0; color: var(--accent2); font-weight:900;}
+
+.grid{display:grid; grid-template-columns: 1fr; gap: 12px;}
+.grid .full{grid-column: 1 / -1;}
+@media (min-width: 760px){
+  .grid{grid-template-columns: 1fr 1fr;}
+}
+
+.support .contact{display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap: 10px; border-top: 1px solid var(--border); margin-top: 12px; padding-top: 12px;}
+.name{margin:0; font-size:1.15rem; font-weight:900;}
+.roles{margin:2px 0 0; color: var(--muted);}
+.links{display:flex; gap:10px; align-items:center;}
+.links a{color: var(--accent); text-decoration:none; font-weight:700;}
+.links a:hover{text-decoration:underline;}
+.fineprint{margin:10px 0 0; color: var(--muted); font-size:.9rem;}
+
+.footer{padding: 18px 0 34px; color: var(--muted); text-align:center;}
+
+/* Print styles */
+@media print{
+  body{background:#fff; color:#000;}
+  .hero, .btn, .note, .footer, .links a[href^='http']{display:none !important;}
+  .card{background:#fff; border:1px solid #bbb; box-shadow:none;}
+  a{color:#000; text-decoration:none;}
+}
