@@ -82,3 +82,39 @@ body{
   .card{background:#fff; border:1px solid #bbb; box-shadow:none;}
   a{color:#000; text-decoration:none;}
 }
+
+/* Floating campaign photo */
+.float-photo{
+  float: right;
+  width: 320px;
+  max-width: 45%;
+  margin: 6px 0 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: rgba(255,255,255,.04);
+}
+
+.float-photo img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Clear float after main content blocks */
+.card::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Mobile behavior: stack, no float */
+@media (max-width: 760px){
+  .float-photo{
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 18px 0;
+  }
+}
