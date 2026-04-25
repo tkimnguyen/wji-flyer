@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Questions & Answers — Kim Nguyen for WJI President</title>
+  <meta name="description" content="Questions and Answers: vision, experience, and plans for Wisconsin Judo as WJI President." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tkimnguyen.github.io/wji-flyer/qa.html" />
+  <meta property="og:title" content="Questions & Answers — Kim Nguyen for WJI President" />
+  <meta property="og:description" content="Vision, qualifications, nonprofit involvement, and plans for WJI and Wisconsin Judo." />
+  <meta property="og:image" content="https://tkimnguyen.github.io/wji-flyer/assets/IMG_5365.jpg" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <style>
+    /* Page header */
+    .qa-header{margin:18px 0 10px;}
+    .qa-header h1{margin:0 0 6px;}
+    .qa-header .sub{margin:0;color:var(--muted);}
+    .qa-nav{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 0;}
+    .qa-nav a{color:var(--accent);text-decoration:none;font-weight:700;}
+    .qa-nav a:hover{text-decoration:underline;}
+
+    /* Controls */
+    .qa-controls{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 18px;}
+    .qa-controls button{
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      color:var(--text);
+      background:rgba(255,255,255,.06);
+      cursor:pointer;
+      font-weight:800;
+    }
+    .qa-controls button:hover{border-color:rgba(255,255,255,.25);}
+    .qa-controls .hint{color:var(--muted);font-size:.95rem;margin:6px 0 0;flex-basis:100%;}
+
+    /* Q&A details styling */
+    .qa details{
+      margin: 14px 0;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      overflow: clip;
+    }
+
+    .qa summary{
+      cursor: pointer;
+      padding: 16px 18px;
+      font-weight: 900;
+      font-size: 1.05rem;
+      list-style: none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .qa summary::-webkit-details-marker{display:none;}
+
+    .qa .summary-left{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:0;
+    }
+
+    .qa .anchor-link{
+      flex: 0 0 auto;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:30px;
+      height:30px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:900;
+      line-height:1;
+    }
+    .qa .anchor-link:hover{border-color:rgba(255,255,255,.25);}
+
+    .qa .toggle-icon{
+      flex: 0 0 auto;
+      font-weight: 900;
+      width: 22px;
+      text-align: right;
+      color: var(--muted);
+    }
+    .qa details[open] .toggle-icon{color: var(--accent2);}
+
+    .qa .answer{
+      padding: 0 18px 18px;
+      line-height: 1.65;
+    }
+
+    .qa .answer p{margin:10px 0;}
+    .qa .answer h4{
+      margin: 14px 0 6px;
+      font-size: 1rem;
+      color: var(--muted);
+      letter-spacing: .02em;
+    }
+    .qa .answer ul{margin:8px 0 0; padding-left:18px;}
+    .qa .answer li{margin:6px 0;}
+
+    /* Anchor targeting: highlight the targeted Q&A block */
+    .qa .target{
+      scroll-margin-top: 16px;
+    }
+    .qa .target:target{
+      outline: 2px solid rgba(77,211,255,.65);
+      border-radius: 12px;
+      padding: 2px;
+    }
+
+    /* Animation (fast): open + close */
+    @media (prefers-reduced-motion: no-preference){
+      /* Opening animation */
+      details[open] .answer{
+        animation: qaOpen 180ms ease-out;
+      }
+      @keyframes qaOpen{
+        from{opacity:0; transform: translateY(-6px);}
+        to{opacity:1; transform: translateY(0);}
+      }
+
+      /* Closing animation (requires JS to delay removal of [open]) */
+      details.qa-closing .answer{
+        animation: qaClose 140ms ease-in forwards;
+      }
+      @keyframes qaClose{
+        from{opacity:1; transform: translateY(0);}
+        to{opacity:0; transform: translateY(-6px);}
+      }
+    }
+
+    /* Print */
+    @media print{
+      .qa-controls, .qa-nav{display:none !important;}
+      .qa details{break-inside:avoid;}
+      .qa summary{border-bottom:1px solid #bbb;}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container qa" role="main" style="padding-top:18px">
+
+    <header class="qa-header">
+      <h1>Questions &amp; Answers</h1>
+      <p class="sub"><strong>Kim Nguyen for WJI President</strong></p>
+      <nav class="qa-nav" aria-label="Site navigation">
+        <a href="./">← Back to home</a>
+        <a href="./assets/print.html">Print flyer</a>
+      </nav>
+    </header>
+
+    <section class="qa-controls" aria-label="Q&A controls">
+      <button type="button" id="expandAll">Expand all</button>
+      <button type="button" id="collapseAll">Collapse all</button>
+      <p class="hint">Tip: Use the link icon (🔗) to copy/share a direct link to any specific Q&amp;A.</p>
+    </section>
+
+    <!-- Q1 -->
+    <details>
+      <summary>
+        <span class="summary-left">
+          <span>What do you think Wisconsin judo needs today?</span>
+          <a class="anchor-link" href="#q-wi-needs" aria-label="Link to this Q&A">🔗</a>
+        </span>
+        <span class="toggle-icon" aria-hidden="true">＋</span>
+      </summary>
+
+      <!-- Target inside details so hash opens this details automatically -->
+      <div id="q-wi-needs" class="target"></div>
+
+      <div class="answer">
+        <h4>Current challenges</h4>
+        <p>For a number of years now, we judoka in Wisconsin have watched the number of tournaments in our state drop. We have seen clubs close. Some of our clubs have reduced membership.</p>
+
+        <h4>Why urgency matters</h4>
+        <p>Meanwhile, we are aware that jujitsu is now much more popular, both in terms of participants and clubs. What we need in Wisconsin is a renewed effort to counter these issues, to stem the tide, and ideally to reverse it.</p>
+
+        <h4>Immediate, practical steps</h4>
+        <p>At the very least, we need to do better at helping each other using basic tools that are now considered table stakes: improving our use of social media, getting a proper WJI website going again, and communicating and collaborating with our state clubs and members using email lists and/or discussion forums or chat groups. We could even try to do some basic advertising!</p>
+
+        <h4>Closing</h4>
+        <p>Right now, there is what I’d call a deafening silence on the part of judo when it comes to awareness of our sport, while MMA and UFC feed interested athletes to jujitsu and BJJ clubs. It’s time for us to do something about it.</p>
+      </div>
+    </details>
+
+    <!-- Q2 -->
+    <details>
+      <summary>
+        <span class="summary-left">
+          <span>What makes you qualified to be WJI president?</span>
+          <a class="anchor-link" href="#q-qualified" aria-label="Link to this Q&A">🔗</a>
+        </span>
+        <span class="toggle-icon" aria-hidden="true">＋</span>
+      </summary>
+
+      <div id="q-qualified" class="target"></div>
+
+      <div class="answer">
+        <h4>Leadership and delivery</h4>
+        <p>I have a lot of experience in the business and nonprofit worlds leading teams, managing projects and people, communicating and engaging with stakeholders and the public, coming up with ideas that are often “out of the box,” driving change, and delivering on projects.</p>
+
+        <h4>Experience from contributor to leader</h4>
+        <p>In my work, I have been an individual contributor, working in the trenches, so to speak, and in those roles I observed my supervisors, directors, and leaders, gaining insight into what I thought they did well, what they didn’t do so well, and what they could have done better. Over the years, I have also been in leadership roles: managing projects, directing teams, and even serving on a consulting company’s leadership team, where I was responsible for providing direction and was held accountable for delivering on projects and initiatives.</p>
+        <p>The skills I developed in those roles—including working (gently and sometimes more firmly) with teammates and colleagues—included how to run meetings effectively to solve problems, prioritize issues, and track progress on goals.</p>
+
+        <h4>UW–Oshkosh and large-scale web delivery</h4>
+        <p>My career in Wisconsin started when I joined the University of Wisconsin–Oshkosh administrative computing division as a software developer and database administrator. Early on, I volunteered to help the College of Education with a grant from the Department of Public Instruction to build a website for nontechnical educators. I did my research and recommended an open‑source website platform called Plone (https://plone.org), which we used to great success. That effort then led to our deploying it across the entire campus, ultimately building over 350 websites, intranets, and custom business‑processing sites.</p>
+        <p>I went from being an individual contributor to leading cross‑functional teams, identifying advocates and allies, hiring staff, giving presentations, and working with campus leadership in my role as intranet project director. Throughout this work, I focused especially on building up my colleagues, because the greatest skill a leader brings to the table is the ability to elevate those around them and to surround themselves with empowered teammates.</p>
+        <p>My greatest challenge—and thus my greatest learning experience—was working with the university marketing team, as a result of which I came to understand how websites and social media can work together effectively to boost and sustain a message across a wide range of audiences.</p>
+
+        <h4>Formal leadership development</h4>
+        <p>In 2012, I was asked to join the University of Wisconsin IT Leadership Program, a months‑long training designed to develop and refine skills used to drive change in an organization through information technology: identifying strengths, weaknesses, and opportunities; setting priorities; working with stakeholders (often those over whom you have no direct authority); and advocating effectively.</p>
+
+        <h4>International nonprofit leadership (Plone)</h4>
+        <p>I have used those skills extensively in my nonprofit life as well. I have been part of the worldwide Plone software community for 23 years, initially as an organizer of two symposia in Oshkosh and later as the organizer of the annual conferences in 2016 (Boston) and 2017 (Barcelona). Since then, I have served as the conference organizing team lead. As you can imagine, organizing these conferences for an underfunded community requires knowing how to work with a diverse, geographically dispersed, and sometimes quirky group of people. It involves cajoling some folks, asking others directly, and periodically nudging and reminding everyone so that everything ultimately gets done on time.</p>
+
+        <h4>Board work, communications, and fundraising</h4>
+        <p>For Plone, I served as a Foundation Board member for six years. During that time, we met frequently to address issues raised by the community and by the teams doing the actual work of developing the software. These biweekly meetings were used for problem‑solving, identifying community members who could assist with specific tasks, working with legal counsel, and figuring out how to nudge often idiosyncratic personalities within our widespread community toward action. We communicated regularly with our membership by publishing minutes from our meetings and by inviting contributions and ideas. Some of the biggest challenges we addressed included fundraising through sponsorships and maintaining a careful balance between board continuity and welcoming new board members.</p>
+
+        <h4>Marketing and public-facing storytelling</h4>
+        <p>I have also served as the Plone marketing team lead, working entirely with volunteers and on a very tight budget, applying both my professional team‑building skills and my understanding of how to use social media, email lists, discussion forums, chat services, blogs, podcasts, YouTube, and websites to promote awareness and advocacy.</p>
+        <p>For a number of years now, I have been the host of the Plone Podcast, interviewing community members and bringing the fascinating stories of these typically behind‑the‑scenes contributors to a worldwide audience.</p>
+      </div>
+    </details>
+
+    <!-- Q3 -->
+    <details>
+      <summary>
+        <span class="summary-left">
+          <span>What other nonprofit involvement have you had?</span>
+          <a class="anchor-link" href="#q-nonprofit" aria-label="Link to this Q&A">🔗</a>
+        </span>
+        <span class="toggle-icon" aria-hidden="true">＋</span>
+      </summary>
+
+      <div id="q-nonprofit" class="target"></div>
+
+      <div class="answer">
+        <h4>School district advocacy</h4>
+        <p>In 2013, I was asked to join the Oshkosh Area School District’s budget reconciliation committee, which was tasked with identifying cuts we would need to make if we could not pass a referendum in 2014. Building on that committee work, I co‑founded Support Oshkosh Students, a nonprofit organization that advocated for the 2014 referendum. Following that success, we continued advocacy efforts for the 2016, 2020, and 2024 referenda.</p>
+        <p>This was a shoestring operation, run with the help of countless volunteers, and it required creative solutions, networking, outreach for donations, building a social media presence and a website, and using email lists and in‑person meetings to engage volunteers and channel their energy into meaningful change. I am grateful that we were able to secure community support to bring technology into the schools (which, despite many challenges, allowed learning to continue during COVID), replace buildings dating back to the Civil War era, and provide modern, comfortable, and healthy learning environments for current and future students.</p>
+
+        <h4>Robotics mentorship</h4>
+        <p>Around 2017, I became involved—through my sons—with the Oshkosh Wave Robotics team. As both a parent and a mentor, I worked to integrate myself into a long‑running team with a distinctive mix of personalities and skills. I supported high‑school students as they designed, built, and competed with their robots by asking questions and offering guidance, reminders, and encouragement. One of my first contributions was rebuilding the team’s website (https://waverobotics.com) using Plone.</p>
+        <p>Rebuilding the site brought several benefits: the previous site was expensive to maintain and did not allow students to create or publish content, whereas the new Plone site enabled us to train students to log in, create pages, and publish their own content. I also helped introduce other technology tools to the team, including centralized password management and the recovery of several years’ worth of orphaned social media accounts.</p>
+
+        <h4>Community board service</h4>
+        <p>At the beginning of COVID, one of my sons began taking sailing lessons at the Oshkosh Yacht Club. As many parents of young sailors discover, my wife and I soon became far more involved than we initially anticipated. Over time, I learned to sail a small Laser and crewed on one of the exceptionally fast E‑scows for several years. Two years ago, I was asked to join the OYC board, where I now serve as part of a group that meets monthly to set objectives and solve problems, including member engagement and fundraising to support the continued operation of this very successful sailing school.</p>
+      </div>
+    </details>
+
+    <!-- Q4 -->
+    <details>
+      <summary>
+        <span class="summary-left">
+          <span>How does your judo career qualify you to be WJI president?</span>
+          <a class="anchor-link" href="#q-judo" aria-label="Link to this Q&A">🔗</a>
+        </span>
+        <span class="toggle-icon" aria-hidden="true">＋</span>
+      </summary>
+
+      <div id="q-judo" class="target"></div>
+
+      <div class="answer">
+        <h4>Origins and growth</h4>
+        <p>My judo career began in 1999, when my wife brought home a flyer for judo classes at the Oshkosh YMCA. There I met Sensei Mehdi Mohammadian, Sensei George Sell, Sensei‑to‑be Jim White, and, of course, Katie Sell. Although, as I’ve mentioned previously, my advancement in judo was initially slow, I was grateful to be promoted to shodan in 2024 after a fire was lit under me and I increased my training in preparation for the U.S. Open.</p>
+
+        <h4>Competition and commitment</h4>
+        <p>This year, I have been training for Nationals, and it has been the most rewarding judo experience of my life. It has made me deeply aware that judo cannot be practiced alone; it requires the help, encouragement, and dedication of fellow judoka and coaches week in and week out.</p>
+
+        <h4>Coaching and officiating</h4>
+        <p>In recent years, I have occasionally assisted with teaching at Fox Valley Judo, and since last year I have served as an assistant coach alongside Katie Sell, Jim White, and Neil Dunday.</p>
+        <p>At the International Judo Camp last summer, I attended a referee clinic and practiced refereeing during the camp shiai. Later in the fall, I received my coaching certification. I particularly value being a new referee, as it has given me a real appreciation for how difficult it can be to make clear, undisputed calls.</p>
+
+        <h4>Student development and welcoming newcomers</h4>
+        <p>Fox Valley Judo has a large kids’ and family class, which regularly reminds me of the importance of careful observation and of delivering advice in ways students can understand and accept. Equally important is knowing when not to say too much and when to allow students to develop their own awareness and self‑correct. I have often reached out to new students and parents to welcome them and ensure they have a positive experience at the club.</p>
+
+        <h4>Tournament support</h4>
+        <p>Over the years, I have helped run our club tournament, which places me in a strong position to organize new local tournaments—something Wisconsin judo needs, both to increase the number of in‑state competitions and to provide opportunities for new referees to develop their skills.</p>
+      </div>
+    </details>
+
+    <!-- Q5 -->
+    <details>
+      <summary>
+        <span class="summary-left">
+          <span>What do you see as WJI’s role in supporting and growing judo in Wisconsin?</span>
+          <a class="anchor-link" href="#q-wji-role" aria-label="Link to this Q&A">🔗</a>
+        </span>
+        <span class="toggle-icon" aria-hidden="true">＋</span>
+      </summary>
+
+      <div id="q-wji-role" class="target"></div>
+
+      <div class="answer">
+        <h4>Board engagement</h4>
+        <p>I was asked to join the WJI board last year, and I am glad I did, as it allowed me to connect with fellow board members and observe how they work. At the same time, I was disappointed that—unlike other boards I have served on, which meet at least monthly—the WJI board met only once per year. I understand there is some historical context behind this, but I do not feel it allows the board to fully realize its potential to drive positive change for judo in Wisconsin.</p>
+
+        <h4>Funding reality</h4>
+        <p>Although WJI has some funds, they are limited, and a larger issue is that WJI currently has no revenue source. WJI receives no membership dues and no income from USA Judo. Without a reliable funding stream, WJI cannot adequately support many important initiatives, such as athlete development, coach development, referee development, or assistance for talented players who would benefit from attending training camps and clinics.</p>
+
+        <h4>Awareness and outreach</h4>
+        <p>I believe WJI would benefit from a systematic awareness campaign that actively invites ideas, feedback, and participation from Wisconsin judoka, clubs, and senseis. WJI should also be reaching out to potential donors and sponsors, clearly communicating what their contributions would help make possible.</p>
+        <p>For such a campaign to succeed, WJI needs an active social media presence with regular posts highlighting judo events and activities from around the state, neighboring states, and relevant national‑level developments. In addition, WJI should leverage mailing lists and possibly a discussion forum or group chat to encourage collaboration and the sharing of ideas and knowledge.</p>
+
+        <h4>Website and shared resources</h4>
+        <p>This past year, I was pleased to create a simple placeholder website for WJI (https://wijudo.org). Some of you may recall that WJI previously had a much more comprehensive web presence, and with its loss, we now need to rebuild a proper website where important documents can be found and where our Wisconsin Judo Hall of Fame inductees can be highlighted.</p>
+        <p>As part of this effort, I have begun the process of applying for Google Workspace for Nonprofits. My intent is to use this workspace to host important documents—including bylaws, past meeting minutes, photos, videos, and Hall of Fame biographies—and to use Google Sites to host a full WJI website at no cost. The new website will also allow Wisconsin clubs to be listed and to share their calendars of events.</p>
+
+        <h4>Referee development</h4>
+        <p>I would also like to see WJI actively support the growth of the referee base in our state. Without sufficient referees, it becomes very difficult to run tournaments of any significant size without relying on officials from outside Wisconsin.</p>
+
+        <h4>Closing</h4>
+        <p>This is what I believe WJI can do for judo in our state: serve as a clearinghouse and a center of collaboration for our clubs, our athletes, and our shared initiatives.</p>
+        <p><strong>We can’t do everything—but we can make a start.</strong></p>
+      </div>
+    </details>
+
+  </main>
+
+  <script>
+    // Expand/Collapse all + animated close
+    // Closing needs JS because <details> hides content immediately when open is removed. [4](https://stackoverflow.com/questions/69958043/animate-a-details-tag-when-closing)[3](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details)
+
+    const allDetails = () => Array.from(document.querySelectorAll('.qa details'));
+
+    function setToggleIcon(d) {
+      const icon = d.querySelector('.toggle-icon');
+      if (!icon) return;
+      icon.textContent = d.open ? '−' : '＋';
+    }
+
+    function openDetails(d) {
+      if (d.open) return;
+      d.open = true;
+      d.classList.remove('qa-closing');
+      setToggleIcon(d);
+    }
+
+    function closeDetailsAnimated(d) {
+      if (!d.open) return;
+      // Add class to play closing animation, then remove [open] after it finishes
+      d.classList.add('qa-closing');
+      setToggleIcon(d);
+
+      const onAnimEnd = (e) => {
+        if (!e || (e.animationName !== 'qaClose')) return;
+        d.open = false;
+        d.classList.remove('qa-closing');
+        setToggleIcon(d);
+        d.removeEventListener('animationend', onAnimEnd);
+      };
+
+      d.addEventListener('animationend', onAnimEnd);
+    }
+
+    // Expand/Collapse all controls [1](https://stackoverflow.com/questions/43008609/expanding-all-details-tags)
+    document.getElementById('expandAll')?.addEventListener('click', () => {
+      allDetails().forEach(openDetails);
+    });
+
+    document.getElementById('collapseAll')?.addEventListener('click', () => {
+      allDetails().forEach(closeDetailsAnimated);
+    });
+
+    // Animate closing on individual summary clicks (intercept default close)
+    allDetails().forEach((d) => {
+      setToggleIcon(d);
+      const summary = d.querySelector('summary');
+      if (!summary) return;
+
+      summary.addEventListener('click', (e) => {
+        // If it's open, we're about to close — intercept and animate
+        if (d.open) {
+          e.preventDefault();
+          closeDetailsAnimated(d);
+        } else {
+          // opening: let browser open naturally, but update icon after toggle
+          // (open animation handled in CSS for details[open])
+          setTimeout(() => setToggleIcon(d), 0);
+        }
+      });
+
+      // Keep icon accurate for non-click toggles (keyboard / programmatic)
+      d.addEventListener('toggle', () => setToggleIcon(d));
+    });
+
+    // If user lands on a hash that targets an element inside a details,
+    // the browser will open the parent details automatically. [2](https://frontendmasters.com/blog/opening-a-details-element-from-the-url/)[3](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details)
+    // We still update icons immediately on load.
+    window.addEventListener('load', () => {
+      allDetails().forEach(setToggleIcon);
+    });
+  </script>
+</body>
+</html>
