@@ -30,6 +30,20 @@ body{
 .note{margin:14px 0 0; color: var(--muted); font-size:.95rem;}
 
 .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0 0;}
+.hero-media{
+  margin-top: 18px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  max-width: 520px;
+}
+
+.hero-media img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .btn{display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid var(--border); color:var(--text); text-decoration:none; background: rgba(255,255,255,.06);}
 .btn:hover{border-color: rgba(255,255,255,.25)}
 .btn.primary{background: linear-gradient(90deg, rgba(77,211,255,.35), rgba(140,255,176,.20)); border-color: rgba(77,211,255,.45)}
