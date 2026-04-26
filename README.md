@@ -12,6 +12,7 @@ This is a simple static website suitable for **GitHub Pages**.
 
 ## Files
 - `index.html` — main page
+- `qa.html` — Q & A page
 - `assets/styles.css` — styling
 - `assets/print.html` — printer-friendly version (also accessible from the main page)
 
